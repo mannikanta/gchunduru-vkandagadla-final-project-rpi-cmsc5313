@@ -11,6 +11,7 @@ import touchSensorIn as lightSensor
 import IRSensor as servoMotorSensor
 import ServoMotor as servo
 import Temperature as tempAndHumdity
+import camera_handler as camera
 
 reader = SimpleMFRC522()
 
@@ -48,6 +49,7 @@ def readKeyPadData(pressedValue):
             print(count)
             count += 1
             if count > 3:
+                camera.capture()
                 print("Camera activated")
                 count = 0  # Reset the count after executing the camera print
     except:
