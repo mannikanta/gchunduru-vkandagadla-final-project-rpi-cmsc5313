@@ -31,12 +31,13 @@
 
 
 import RFIDReader
-import KeypadIn as keyIn 
-import Internal1
+# import KeypadIn as keyIn 
+# import Internal1
 
 while True:
-   pressedValue =  keyIn.loop()
-   boolVal = Internal1.readKeyPadData(pressedValue)
+     RFIDReader.readCard() 
+   # pressedValue =  keyIn.loop()
+   # boolVal = Internal1.readKeyPadData(pressedValue)
    
    
 #     touchButton.touchFunctionality()
