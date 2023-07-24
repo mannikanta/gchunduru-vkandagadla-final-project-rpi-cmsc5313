@@ -28,12 +28,12 @@ def readKeyPadData(pressedValue):
     mainDoorValue = collection.document(Constants.DOCUMENT_MAIN_DOOR)
 
     try: 
-        print(pressedValue)
+        # print(pressedValue)
         if pressedValue == "1234":
             door.setup()
+            mainDoorValue.update({'mDoorStatus': "opening"})
             door.loop() 
-            mainDoorValue.update({'mDoorStatus': "opened"})
-            time.sleep(0.1)
+            time.sleep(4)
             mainDoorValue.update({'mDoorStatus': "closed"}) 
             sensor_thread = threading.Thread(target=readSensors)
             sensor_thread.start()

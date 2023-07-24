@@ -30,14 +30,26 @@
 
 
 
-import RFIDReader
-# import KeypadIn as keyIn 
-# import Internal1
 
+import RfidCardTest
+import KeypadIn as keyIn 
+import Internal1
+import firebase_setup
+import Constants as constants
+
+collection = firebase_setup.db.collection(constants.COLLECTION_NAME)
+valueEmbed = collection.document(constants.DOCUMENT_EMBEDDED)
 while True:
-     RFIDReader.readCard() 
-   # pressedValue =  keyIn.loop()
-   # boolVal = Internal1.readKeyPadData(pressedValue)
+     #    document_emb = valueEmbed.get().to_dict()
+     #    ein = document_emb.get('embedded')
+     #    if ein == True:
+        #      RfidCardTest.loop()
+     #    else:     
+              pressedValue =  keyIn.loop()
+              boolVal = Internal1.readKeyPadData(pressedValue)
+    #  RFIDReader.readCard() 
+#    pressedValue =  keyIn.loop()
+#    boolVal = Internal1.readKeyPadData(pressedValue)
    
    
 #     touchButton.touchFunctionality()

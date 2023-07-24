@@ -23,7 +23,7 @@ def loop():
     while len(pressed_keys_str) < 4:
         key = keypad.getKey()
         if key != keypad.NULL:
-            print("You Pressed Key: %c" % key)
+            # print("You Pressed Key: %c" % key)
             pressed_keys_str += key
     return pressed_keys_str
 

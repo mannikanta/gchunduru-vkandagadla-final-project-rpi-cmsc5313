@@ -21,7 +21,7 @@ def loop():
                 break
             time.sleep(0.1)
         # print("Humidity: %.2f, \tTemperature: %.2f \n" % (humidity, temperature))
-        # lcd.text("Humidity"+" "+str(humidity), 1)
+        lcd.text("Humidity"+" "+str(humidity), 1)
         lcd.text("Temperature"+" "+str(temperature), 2)
         # hygrothermo_ref.update({'':humidity})
         hygrothermo_ref.update({'temp':temperature})

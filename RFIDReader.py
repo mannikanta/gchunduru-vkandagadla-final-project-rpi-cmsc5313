@@ -13,7 +13,7 @@ import ServoMotor as servo
 import Temperature as tempAndHumdity
 import camera_handler as camera
 
-
+ 
 reader = SimpleMFRC522()
 
 collection = firebase_setup.db.collection(Constants.COLLECTION_NAME)
@@ -24,10 +24,10 @@ def readCard():
         global count
         mainDoorValue = collection.document(Constants.DOCUMENT_MAIN_DOOR)
         try: 
-           print("hey Im in MFRC522")
+           
            id, text = reader.read()
            count = 0
-           print('ID:', id)
+                  print('ID:', id)
            if id == 114018660653 or id == 222867724730 or id == "None":
                   door.setup()
                   door.loop() 
